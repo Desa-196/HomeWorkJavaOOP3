@@ -1,0 +1,2 @@
+https://github.com/Desa-196/HomeWorkJavaOOP1/tree/master/Task1
+Работал с классом Cat, добавил интерфейс Caudate (Виляние хвостом), Jump(Прыжок) и абстрактный класс Pet(Домашние животные)
