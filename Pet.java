@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public abstract class Pet {
    
     protected Owner owner;
@@ -8,7 +10,8 @@ public abstract class Pet {
     public void setOwner(Owner owner){
         this.owner = owner;
     }
-
+    //Будет содержать список обученных команд
+    protected HashMap<String, Command> listCommand = new HashMap<>();
     
     protected String name;
     public String getName(){
@@ -24,6 +27,14 @@ public abstract class Pet {
     }
     public void setAge(int age){
         this.age = age;
+    }
+    //Выполнит указанную команду
+    public void runCommand(String command){
+        listCommand.get(command).run();
+    }
+    //Обучить команде
+    public void teachCommand(String name_command, Command command){
+        listCommand.put(name_command, command);
     }
 
     public abstract void greet();

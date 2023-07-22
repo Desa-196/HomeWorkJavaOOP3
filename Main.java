@@ -17,7 +17,12 @@ public class Main {
         Cat cat3 = new Cat("Картошка", 11);
         Cat cat4 = new Cat("Мурзик", 2);
         Cat cat5 = new Cat("Соня", 6);
+
         Cat cat6 = new Cat("Зефир", 15);
+        //Обучаем котика команде
+        cat6.teachCommand("Сидеть", () -> System.out.println("Сел"));
+        //Говорим выполнить обученную команду
+        cat6.runCommand("Сидеть");
 
         List<Pet> petList = Arrays.asList(cat, cat2, cat3, cat4, cat5, cat6);
 
