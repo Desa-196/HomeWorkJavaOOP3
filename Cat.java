@@ -33,5 +33,9 @@ public class Cat extends Pet implements Caudate, Jump{
         if(age <= 25) this.age = (int)age;
         else System.out.println("Ошибка установки возраста. Слишком большой возраст!");
     }
+    @Override
+    public String toString(){
+        return String.format("Имя: %s Возраст: %s", name, age);
+    }
 
 }
