@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -20,8 +21,12 @@ public class Main {
 
         List<Pet> petList = Arrays.asList(cat, cat2, cat3, cat4, cat5, cat6);
 
+        Comparator<Pet> comparatorAge = (x, y) -> x.getAge() - y.getAge();
+
         //Передаем компаратор реализованный в лямбда выражении для сортировки котов по возрасту
         petList.sort((x, y) -> x.getAge() - y.getAge());
+        //Или передаем созданный ранее компаратор
+        petList.sort(comparatorAge);
 
         System.out.println(petList);
 
